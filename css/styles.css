@@ -12076,3 +12076,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
+
+.responsive-text {
+  font-size: clamp(10px, 0.5vw, 15px);
+}
