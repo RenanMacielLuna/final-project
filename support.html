@@ -10,7 +10,7 @@
     <meta name="author" content="" />
     <title>PS5 - Support Page</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/playstation.svg" />
     <!-- Custom Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,29 +76,99 @@
                 <div
                   class="badge bg-gradient-primary-to-secondary text-white mb-4"
                 ></div>
-                <p>
-                  to get incontact with support, please, click on this link. 
-                </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xxl-7">
-              <!-- Header profile picture-->
-              <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                <div class="profile bg-gradient-primary-to-secondary">
-                  <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
-                  <!-- Watch a tutorial on how to do this on YouTube (link)-->
-                  <img
-                    class="profile-img"
-                    src="https://www.imagensempng.com.br/wp-content/uploads/2020/11/005.png"
-                    alt="PS5 Console"
-                  />
-                </div>
               </div>
             </div>
           </div>
         </div>
       </header>
+
+      <section class="py-5">
+        <div class="text-center mb-5">
+          <p>
+            To contact support page, please send an e-mail by clicking on this
+            <a href="mailto:xxxxxx@xxxx.com">link</a>. We will be glad to help
+            you.
+          </p>
+          <p>
+            You can also call us on the phone number
+            <a href="tel:+xx(xxx)xxx-xxxx">+xx(xxx)xxx-xxxx</a>. Or you can fill
+            the form below to add more details on your issue with your
+            PlayStation&reg;5 console.
+          </p>
+        </div>
+      </section>
+
+      <div class="text-center col-lg-6 center-div">
+        <h1 class="fw-bolder text-wrap">
+          Put your data, and your problem about your PS5. We will be in contact
+          with you soon.
+        </h1>
+      </div>
+      <section class="py-5">
+        <div class="text-center mb-5">
+          <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+              <form id="contactForm">
+                <div class="form-floating col-lg-12">
+                  <input
+                    class="form-control"
+                    id="name"
+                    type="text"
+                    placeholder="Enter your name..."
+                    onblur="enableButtonIssue()"
+                    required
+                  />
+                  <label for="name">Full Name</label>
+                  <div class="text-danger" id="invalid-feedback-name" hidden>
+                    A name is required.
+                  </div>
+                </div>
+                <br />
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="email"
+                    type="email"
+                    placeholder="name@example.com"
+                    onblur="enableButtonIssue()"
+                    required
+                  />
+                  <label for="email">Email address</label>
+                  <div class="text-danger" id="invalid-feedback-email" hidden>
+                    An email is required.
+                  </div>
+                </div>
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="comment"
+                    onblur="enableButtonIssue()"
+                    required
+                  ></textarea>
+                  <label for="issue" class="form-label">Your Issue</label>
+                  <div class="text-danger" id="invalid-feedback-issue" hidden>
+                    An issue is required.
+                  </div>
+                </div>
+                <br />
+                <!-- Submit Button-->
+                <div class="d-grid">
+                  <button
+                    class="btn btn-primary btn-lg"
+                    type="submit"
+                    id="my-button"
+                    onclick="showAlertIssue()"
+                    disabled
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Footer-->
     <footer class="bg-white py-4 mt-auto">

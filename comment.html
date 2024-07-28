@@ -8,9 +8,9 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Personal - Start Bootstrap Template</title>
+    <title>PS5 - Comment Page</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/playstation.svg" />
     <!-- Custom Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,7 +32,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container px-5">
           <a class="navbar-brand" href="index.html"
-            ><span class="fw-bolder text-primary">Start Bootstrap</span></a
+            ><span class="fw-bolder text-primary">PS5</span></a
           >
           <button
             class="navbar-toggler"
@@ -83,7 +83,9 @@
                     required
                   />
                   <label for="name">Full Name</label>
-                  <div class="invalid-feedback">A name is required.</div>
+                  <div class="text-danger" id="invalid-feedback-name" hidden>
+                    A name is required.
+                  </div>
                 </div>
                 <br />
                 <div class="form-floating mb-3">
@@ -96,14 +98,8 @@
                     required
                   />
                   <label for="email">Email address</label>
-                  <div
-                    class="invalid-feedback"
-                    data-sb-feedback="email:required"
-                  >
+                  <div class="text-danger" id="invalid-feedback-email" hidden>
                     An email is required.
-                  </div>
-                  <div class="invalid-feedback" data-sb-feedback="email:email">
-                    Email is not valid.
                   </div>
                 </div>
                 <div class="form-floating">
@@ -115,6 +111,9 @@
                     required
                   ></textarea>
                   <label for="comment" class="form-label">Your Comment</label>
+                  <div class="text-danger" id="invalid-feedback-comment" hidden>
+                    A comment is required.
+                  </div>
                 </div>
                 <br />
                 <!-- Submit Button-->
@@ -126,7 +125,7 @@
                     onclick="showAlert()"
                     disabled
                   >
-                    Submit
+                    Add Comment
                   </button>
                 </div>
               </form>
